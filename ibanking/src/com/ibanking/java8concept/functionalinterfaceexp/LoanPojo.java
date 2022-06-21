@@ -8,6 +8,8 @@ public class LoanPojo {
 	private String customerName;
 	private int age;
 	private int loanType;
+	
+	private int empid = 4444444;
 
 
 	
