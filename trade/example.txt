@@ -1,0 +1,26 @@
+customer
+
+
+
+
+order table - orderid, ordername , amount ,  , status , customerid
+
+1, dp,12000,on delivery,1
+2 , new , 60000, delivered,1
+3 , marrage , 360000, processing new,2
+
+
+order_items
+prodectId , productName , price , quantity , orderid , order_item_id,ordered_date
+101, hplaotop , 50000,1 , 2 ,1
+289 , samsung mob,10000,1 , 2,2
+456,mobilcover,340,2 , 2,3
+101,hplaptop, 50000,3,4
+
+
+product
+1
+2
+3
+101  computer
+102

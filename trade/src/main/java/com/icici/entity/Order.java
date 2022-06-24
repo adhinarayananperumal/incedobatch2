@@ -1,10 +1,13 @@
 package com.icici.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,7 +28,12 @@ public class Order {
 	private double amount;
 
 	private String status;
-
+	
+	
+	@OneToMany(mappedBy = "order")
+	List<OrderItem> items;
+	
+	
 	public int getOrderId() {
 		return orderId;
 	}
@@ -57,5 +65,7 @@ public class Order {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	
 
 }
