@@ -1,5 +1,6 @@
 package com.icici.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderClient {
@@ -53,21 +54,54 @@ public class OrderClient {
 		
 	//	List<Order> orderList = orderManagementDaoImpl.getOrderByNameLike("New");
 		
-		List<Order> orderList = orderManagementDaoImpl.getOrderByNameLikeNamed("New");
+	/*
+	 * List<Order> orderList =
+	 * orderManagementDaoImpl.getOrderByNameLikeNamed("New");
+	 * 
+	 * 
+	 * if (orderList == null) { System.out.println("No Order Found"); } else { for
+	 * (Order order : orderList) { System.out.println(order.getOrderId());
+	 * System.out.println(order.getOrderName());
+	 * System.out.println(order.getStatus()); System.out.println(order.getAmount());
+	 * }
+	 * 
+	 * System.out.println("Order details retrival  successfull...."); }
+	 */
+		
+		Order order = new Order(); 
+		order.setOrderName("tamil new year");
+		order.setAmount(30000);
+		
+		OrderItem OrderItem1 = new OrderItem();
+		OrderItem1.setProductId(101);
+		OrderItem1.setOrder(order);
+		
+		OrderItem OrderItem2 = new OrderItem();
+		OrderItem2.setProductId(444);
+		OrderItem2.setOrder(order);
 
+		
+		OrderItem OrderItem3 = new OrderItem();
+		OrderItem3.setProductId(333);
+		OrderItem3.setOrder(order);
 
-		if (orderList == null) {
-			System.out.println("No Order Found");
-		} else {
-			for (Order order : orderList) {
-				System.out.println(order.getOrderId());
-				System.out.println(order.getOrderName());
-				System.out.println(order.getStatus());
-				System.out.println(order.getAmount());
-			}
+		
+		OrderItem OrderItem4 = new OrderItem();
+		OrderItem4.setProductId(888);
+		OrderItem4.setOrder(order);
 
-			System.out.println("Order details retrival  successfull....");
-		}
+		
+		
+		List<OrderItem> itemsList=new ArrayList();
+		itemsList.add(OrderItem1);
+		itemsList.add(OrderItem2);
+		itemsList.add(OrderItem3);
+		itemsList.add(OrderItem4);
+		
+		order.setItems(itemsList);
+
+		
+		orderManagementDaoImpl.createOrderwithItems(order);
 		
 	}
 

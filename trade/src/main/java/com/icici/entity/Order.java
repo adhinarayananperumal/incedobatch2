@@ -2,6 +2,7 @@ package com.icici.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,6 @@ import javax.persistence.Table;
 public class Order {
 
 	@Id
-	@GeneratedValue
 	@Column(name = "order_id")
 	private int orderId;
 
@@ -30,10 +30,18 @@ public class Order {
 	private String status;
 	
 	
-	@OneToMany(mappedBy = "order")
+	@OneToMany(mappedBy = "order",cascade = {CascadeType.ALL})
 	List<OrderItem> items;
 	
 	
+	public List<OrderItem> getItems() {
+		return items;
+	}
+
+	public void setItems(List<OrderItem> items) {
+		this.items = items;
+	}
+
 	public int getOrderId() {
 		return orderId;
 	}

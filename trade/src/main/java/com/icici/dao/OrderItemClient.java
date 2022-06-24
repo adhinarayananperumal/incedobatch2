@@ -11,7 +11,10 @@ public class OrderItemClient {
 		
 		
 		OrderItemDaoImpl orderItemDaoImpl= new OrderItemDaoImpl();
-		orderItemDaoImpl.saveOrderItemForOrder(orderItem, 11);
+		//orderItemDaoImpl.saveOrderItemForOrder(orderItem, 11);
+		
+		orderItemDaoImpl.getOrderWithOrderItemDetail(10);
+
 	}
 
 }
