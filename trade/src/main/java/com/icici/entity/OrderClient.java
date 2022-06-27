@@ -1,7 +1,6 @@
 package com.icici.entity;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.icici.dao.PaymentDaoImpl;
 
 public class OrderClient {
 
@@ -67,7 +66,7 @@ public class OrderClient {
 	 * 
 	 * System.out.println("Order details retrival  successfull...."); }
 	 */
-		
+		/*
 		Order order = new Order(); 
 		order.setOrderName("tamil new year");
 		order.setAmount(30000);
@@ -102,6 +101,13 @@ public class OrderClient {
 
 		
 		orderManagementDaoImpl.createOrderwithItems(order);
+		*/
+		
+		Payment payment = new Payment();
+		payment.setPaymentStatus("s");
+		
+		PaymentDaoImpl paymentDaoImpl = new PaymentDaoImpl();
+		paymentDaoImpl.savePaymentForOrder(payment, 105);
 		
 	}
 
