@@ -72,11 +72,11 @@ public class OrderClient {
 		order.setAmount(30000);
 		
 		OrderItem OrderItem1 = new OrderItem();
-		OrderItem1.setProductId(101);
+		OrderItem1.setProductId(25);
 		OrderItem1.setOrder(order);
 		
 		OrderItem OrderItem2 = new OrderItem();
-		OrderItem2.setProductId(444);
+		OrderItem2.setProductId(26);
 		OrderItem2.setOrder(order);
 
 		
@@ -103,11 +103,19 @@ public class OrderClient {
 		orderManagementDaoImpl.createOrderwithItems(order);
 		*/
 		
-		Payment payment = new Payment();
-		payment.setPaymentStatus("s");
+		/*
+		 * Payment payment = new Payment(); payment.setPaymentStatus("s");
+		 * 
+		 * PaymentDaoImpl paymentDaoImpl = new PaymentDaoImpl();
+		 * paymentDaoImpl.savePaymentForOrder(payment, 105);
+		 */
 		
-		PaymentDaoImpl paymentDaoImpl = new PaymentDaoImpl();
-		paymentDaoImpl.savePaymentForOrder(payment, 105);
+		
+		
+		
+		
+		
+		
 		
 	}
 
