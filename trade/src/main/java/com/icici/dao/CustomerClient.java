@@ -16,7 +16,9 @@ public class CustomerClient {
 
 		// customer to product details
 		
-		customerDaoImpl.associateCustomerTOProductOnBuy(1,25);
+		//customerDaoImpl.associateCustomerTOProductOnBuy(1,25);
+		
+		customerDaoImpl.getCustomerList();
 
 	}
 
