@@ -1,11 +1,23 @@
-package com.icici.sharemarket.pojo;
+package com.icici.sharemarket.entity;
 
-public class EmployeePojo {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	private int empId;
-	private String employeeName;
-	private int age;
+@Entity
+@Table(name="emp_deta")
+public class Employee {
 	
+	
+	@Id
+	@GeneratedValue
+	private int empId;
+	
+	private String employeeName;
+	
+	private int age;
+
 	public int getEmpId() {
 		return empId;
 	}
@@ -31,4 +43,9 @@ public class EmployeePojo {
 	}
 
 	
+	
+	
+	
+	
+
 }
