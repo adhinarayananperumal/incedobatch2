@@ -15,4 +15,13 @@ public class WelcomeController {
 
 		return "employeeRegistrationform";
 	}
+	
+	
+	@RequestMapping(value = "/aaa", method = RequestMethod.GET)
+	public String aaafffaaa(ModelMap model) {
+		
+		System.out.println("inside ..........emp reg form show ");
+
+		return "bbbb";
+	}
 }
