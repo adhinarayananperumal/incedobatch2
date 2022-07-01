@@ -15,7 +15,7 @@ public interface EmployeeService {
 	
 	EmployeePojo editEmployee(EmployeePojo employeePojo);
 
-    List<EmployeePojo> listEmployee();
+    EmployeePojo listEmployee();
     
     List<EmployeePojo>  getEmployeeByNameWithLike(String empName);
 
