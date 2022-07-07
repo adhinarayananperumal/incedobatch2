@@ -13,6 +13,13 @@ import EmployeeManagement from './EmployeeManagement';
 import Dashboard from './Dashboard';
 
 import About from './About';
+
+import EmployeeRegistration from './EmployeeRegistration';
+
+
+
+
+
 import Employee from "./Employee";
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -60,7 +67,7 @@ export default function LandingPage() {
                     <Route path="about" element={<About />} />
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="employeeManagement" element={<EmployeeManagement />} />
-                    <Route path="registerNewEmployee" element={<Employee />} />
+                    <Route path="registerNewEmployee" element={<EmployeeRegistration/>} />
                 </Routes>
 
             </BrowserRouter>
