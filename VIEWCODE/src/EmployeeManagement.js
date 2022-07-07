@@ -1,12 +1,28 @@
+import React from "react";
+import {
+  Link
+} from "react-router-dom";
+import Employee from "./Employee";
+
+
 export default function EmployeeManagement() {
-    return (
-      <div>
-        <h2>Employee Management </h2>
+  return (
+    <div>
+      <h2>Employee Management </h2>
 
-        <a href="registerNewEmployee">Register new Employee</a> <br/>
-        <a href="updateEmployeeDetails">Update employee details </a><br/>
-        <a href="deleteEmployee">Delete Employee</a><br/>
+      <ul>
+        <li>
+          <Link to="/registerNewEmployee">Register new Employee</Link>
+        </li>
+        <li>
+          <Link to="/updateEmployeeDetails">Update employee details</Link>
+        </li>
+        <li>
+          <Link to="/deleteEmployee">Delete Employee</Link>
+        </li>
+      </ul>
+      <hr />
 
-      </div>
-    );
-  }
+    </div>
+  );
+}

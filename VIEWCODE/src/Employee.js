@@ -7,21 +7,9 @@ export default function Employee(props) {
 
     return (
         <div>
-            <h1>Employee Dashboard</h1>
-            {props.e.map(employee => <p> {employee.empName}</p>)}
-
-            <h3> Employee Id Generation </h3>
-
-            <EmployeeIdGeneration />
-            <UseEffectExample/>
+            <h3>Employee Registration Form</h3>
+            <EmployeeRegistrationForm />
         </div>
-
-
-
-
-
-
-
     );
 }
 
@@ -42,7 +30,6 @@ export function EmployeeRegistrationForm(props) {
 
         <div>
 
-            <EmployeeSalary/>
 
             <form onSubmit={handleSubmit}>
                 <label>
@@ -53,7 +40,7 @@ export function EmployeeRegistrationForm(props) {
                         onChange={e => setEmployeeName(e.target.value)}
                     />
                 </label>
-
+                <br />
                 <label>
                     Employee  Age:
                     <input
@@ -62,7 +49,7 @@ export function EmployeeRegistrationForm(props) {
                         onChange={e => setAge(e.target.value)}
                     />
                 </label>
-
+                <br />
                 <label>
                     Employee  Status:
                     <input
@@ -70,7 +57,7 @@ export function EmployeeRegistrationForm(props) {
                         value={status}
                         onChange={e => setStatus(e.target.value)}
                     />
-                </label>
+                </label><br/>
                 <input type="submit" value="Register Employee" />
             </form>
         </div>
