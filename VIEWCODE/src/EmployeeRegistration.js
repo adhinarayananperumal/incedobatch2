@@ -38,7 +38,6 @@ export function EmployeeRegistrationForm(props) {
 
         fetch('http://localhost:8080/employee/createEmpReg',{
             method: 'POST',
-            mode: "cors",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
