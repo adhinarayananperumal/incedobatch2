@@ -71,7 +71,7 @@ export default function LandingPage() {
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="employeeManagement" element={<EmployeeManagement />} />
                     <Route path="registerNewEmployee" element={<EmployeeRegistration/>} />
-                    <Route path="editEmployee/:id" exact={true} element={<EditEmployee/>} />
+                    <Route path="editEmployee/:empId" exact={true} element={<EditEmployee/>} />
 
                 </Routes>
 

@@ -15,6 +15,7 @@ export default function Dashboard() {
 
 
   useEffect(() => {
+    alert("dashboard use effort");
     setLoading(true);
     listEmp();
     console.log("Call fired....");
@@ -34,6 +35,7 @@ export default function Dashboard() {
   }
 
   async function listEmp() {
+    alert("list employee");
     const response = await fetch('http://localhost:8080/employee/listEmp');
     const json = await response.json();
     setEmployee(json);
@@ -75,7 +77,7 @@ export default function Dashboard() {
                 <td >{e.status}</td>
               <td>  <a onClick={() => remove(e.empId)}>Delete</a> </td>
 
-              <Button size="sm" color="primary" tag={Link} to={"/editEmployee/" + e.empId}>Edit</Button>
+              <td>   <Button size="sm" color="primary" tag={Link} to={"/editEmployee/" + e.empId}>Edit</Button> </td> 
 
               </tr>
             ))
