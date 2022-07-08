@@ -15,6 +15,7 @@ import Dashboard from './Dashboard';
 import About from './About';
 
 import EmployeeRegistration from './EmployeeRegistration';
+import EditEmployee from './EditEmployee';
 
 
 
@@ -49,6 +50,8 @@ export default function LandingPage() {
                     <li>
                         <Link to="/employeeManagement">Employee Management</Link>
                     </li>
+
+                   
                 </ul>
 
                 <hr />
@@ -68,6 +71,8 @@ export default function LandingPage() {
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="employeeManagement" element={<EmployeeManagement />} />
                     <Route path="registerNewEmployee" element={<EmployeeRegistration/>} />
+                    <Route path="editEmployee/:id" exact={true} element={<EditEmployee/>} />
+
                 </Routes>
 
             </BrowserRouter>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { Button, ButtonGroup, Container, Table } from 'reactstrap';
 
 
 export default function Dashboard() {
@@ -67,12 +68,15 @@ export default function Dashboard() {
         <tbody>
           {
             employee.listEmp.map(e => (
-              <tr>
+              <tr key={e.empId}>
                 <td> {e.empId}</td>
                 <td >{e.employeeName}</td>
                 <td >{e.age}</td>
                 <td >{e.status}</td>
-                <a onClick={() => remove(e.empId)}>Delete</a>
+              <td>  <a onClick={() => remove(e.empId)}>Delete</a> </td>
+
+              <Button size="sm" color="primary" tag={Link} to={"/editEmployee/" + e.empId}>Edit</Button>
+
               </tr>
             ))
 
