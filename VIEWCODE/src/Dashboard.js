@@ -3,22 +3,31 @@ import React, { useState, useEffect } from "react";
 
 export default function Dashboard() {
 
-  const [isLoaded, setIsLoaded] = useState(false);
-
+  let loaded = false;
   const [employee, setEmployee] = useState({});
 
+  const [loading, setLoading] = useState(true)
+
+
   useEffect(() => {
+    setLoading(true);
+
     async function listEmployees() {
       const response = await fetch('http://localhost:8080/employee/listEmp');
       const json = await response.json();
       setEmployee(json);
       console.log(json);
-      isLoaded = true;
-      alert("ererfhfeyre");
+      loaded = true;
+      setLoading(false);
+
     }
     listEmployees();
     console.log("Call fired....");
   }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
@@ -34,6 +43,7 @@ export default function Dashboard() {
         </thead>
         <tbody>
           {
+
 
             employee.listEmp.map(e => (
               <tr>
